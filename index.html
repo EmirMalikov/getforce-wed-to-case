@@ -12,7 +12,7 @@
 <body>
     <h1>Sign Up for a Birthday Email!</h1>
 
-    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" onsubmit="beforeSubmit()" method="POST">
+    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" onsubmit="beforeSubmit(event)" method="POST">
     
         <input type=hidden name="oid" value="00D040000002trd">
         <input type=hidden name="retURL" value="https://mroutt.github.io/SalesforceWebToLead/thankyou.html">
@@ -27,7 +27,7 @@
                 
         <label for="date-of-birth">Date of Birth</label><input required type="date" id="date-of-birth" />
 
-        <div class="g-recaptcha" data-sitekey="6LducAcnAAAAAL6fVeEOQuQqHDTd17RACa74bDPl"></div>
+        <div class="g-recaptcha" data-callback="captchaSuccess" data-sitekey="6LducAcnAAAAAL6fVeEOQuQqHDTd17RACa74bDPl"></div>
 
         <input type="submit" name="submit">
     
